@@ -1,0 +1,19 @@
+[project]
+name = "etl-api-finance"
+version = "0.1.0"
+description = "ELT financeiro com AirFlow e DTB"
+authors = [
+    {name = "august0devdata",email = "flavio.datadev@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "python-dotenv (>=1.2.1,<2.0.0)",
+    "sqlalchemy (>=2.0.44,<3.0.0)",
+    "dbt-postgres (>=1.9.1,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

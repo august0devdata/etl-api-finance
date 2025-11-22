@@ -1,0 +1,31 @@
+[0m17:18:03.630802 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x796a36cf9120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x796a35abc220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x796a35abc1c0>]}
+
+
+============================== 17:18:03.663906 | 9c2ba098-07bb-406e-b47f-d0742e5591d4 ==============================
+[0m17:18:03.663906 [info ] [MainThread]: Running with dbt=1.10.15
+[0m17:18:03.664528 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'printer_width': '80', 'log_cache_events': 'False', 'target_path': 'None', 'invocation_command': 'dbt init etl_api_finance', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'use_experimental_parser': 'False', 'empty': 'None', 'profiles_dir': '/home/flavio_augusto/.dbt', 'introspect': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'static_parser': 'True', 'version_check': 'True', 'warn_error': 'None', 'log_format': 'default', 'debug': 'False', 'partial_parse': 'True', 'log_path': 'logs', 'no_print': 'None', 'cache_selected_only': 'False'}
+[0m17:18:03.702885 [info ] [MainThread]: Creating dbt configuration folder at /home/flavio_augusto/.dbt
+[0m17:18:03.704920 [debug] [MainThread]: Starter project path: /home/flavio_augusto/.cache/pypoetry/virtualenvs/etl-api-finance-ud40aOaD-py3.10/lib/python3.10/site-packages/dbt/include/starter_project
+[0m17:18:03.707488 [info ] [MainThread]: 
+Your new dbt project "etl_api_finance" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:18:03.708034 [info ] [MainThread]: Setting up your profile.
+[0m17:22:26.823486 [info ] [MainThread]: Profile etl_api_finance written to /home/flavio_augusto/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m17:22:26.833323 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 263.27222, "process_in_blocks": "40", "process_kernel_time": 0.188068, "process_mem_max_rss": "109044", "process_out_blocks": "760", "process_user_time": 1.96872}
+[0m17:22:26.834372 [debug] [MainThread]: Command `dbt init` succeeded at 17:22:26.834096 after 263.27 seconds
+[0m17:22:26.835124 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x796a36cf9120>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x796a3877f970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x796a35c1b460>]}
+[0m17:22:26.836028 [debug] [MainThread]: Flushing usage events
+[0m17:22:27.855010 [debug] [MainThread]: An error was encountered while trying to flush usage events

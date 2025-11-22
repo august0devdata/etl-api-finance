@@ -1,0 +1,7 @@
+project:
+  name: etl-api-finance
+
+compose:
+  webserver:
+    ports:
+      - "8088:8080"
