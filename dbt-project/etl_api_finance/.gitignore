@@ -2,3 +2,19 @@
 target/
 dbt_packages/
 logs/
+dbt.log
+__pycache__/
+.git
+.env
+.DS_Store
+airflow_settings.yaml
+__pycache__/
+astro
+.venv
+airflow-webserver.pid
+webserver_config.py
+airflow.cfg
+airflow.db
+# dbt logs
+logs/
+dbt.log
