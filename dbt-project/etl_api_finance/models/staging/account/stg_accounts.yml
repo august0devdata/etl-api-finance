@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: stg_accounts
+    alias: accounts
+    description: "Tabela de staging contendo dados padronizados de contas bancárias."
+
+    columns:
+      - name: id_cliente
+        description: "Identificador único do cliente relacionado à conta."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_clientes')
+              field: id_cliente
+
+      - name: agencia
+        description: "Código da agência bancária associada à conta."
+        tests:
+          - not_null
+
+      - name: tipo_conta
+        description: "Tipo ou nome da conta bancária."
+        tests:
+          - not_null
+          
+      - name: data_carga
+        description: "ultima atualização da carga"

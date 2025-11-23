@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_cliente
+    alias: clients
+    description: "Modelo de staging dos clientes, limpando e padronizando tipos."
+    columns:
+      - name: id_cliente
+        description: "Identificador único do cliente."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: nome
+        description: "Nome completo do cliente."
+        data_tests:
+          - not_null
+
+      - name: email
+        description: "Email do cliente."
+        data_tests:
+          - not_null
+
+      - name: data_nascimento
+        description: "Data de nascimento do cliente."
+        data_tests:
+          - not_null
+
+      - name: cidade
+        description: "Cidade do cliente."
+
+      - name: estado
+        description: "Estado do cliente."
+        
+      - name: data_carga
+        description: "ultima atualização da carga"       

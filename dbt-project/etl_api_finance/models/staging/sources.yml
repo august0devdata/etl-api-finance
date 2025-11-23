@@ -1,0 +1,44 @@
+version: 2
+
+sources:
+  - name: public
+    schema: public
+
+    tables:
+
+      - name: raw_cliente
+        description: "Tabela bruta de clientes ingerida via API"
+        columns:
+          - name: Name
+            description: "Nome completo do cliente"
+          - name: Email
+            description: "Email do cliente"
+          - name: DataNascimento
+            description: "Data de nascimento do cliente"
+          - name: Endereco
+            description: "Endereço completo"
+          - name: Cidade
+            description: "Cidade de residência"
+          - name: Estado
+            description: "Estado de residência"
+          - name: id
+            description: "Identificador único do cliente"
+
+
+      - name: raw_account
+        description: "Tabela bruta de contas/transactions ingerida via API"
+        columns:
+          - name: Agencia
+            description: "Número da agência"
+          - name: NumeroConta
+            description: "Número da conta"
+          - name: NomeConta
+            description: "Nome da conta ou titular"
+          - name: Valor
+            description: "Valor da transação"
+          - name: TipoTransacao
+            description: "Tipo da transação (crédito/débito)"
+          - name: DescricaoTransacao
+            description: "Descrição da transação"
+          - name: ClientId
+            description: "ID que referencia o cliente"

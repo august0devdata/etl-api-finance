@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stg_account_transactions
+    alias: transactions
+    description: "Tabela de staging contendo o histórico de transações financeiras dos clientes."
+
+    columns:
+      - name: id_cliente
+        description: "Identificador do cliente relacionado à transação."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_clientes')
+              field: id_cliente
+
+      - name: valor
+        description: "Valor monetário da transação."
+        tests:
+          - not_null
+
+      - name: tipo_transacao
+        description: "Categoria da transação realizada."
+        tests:
+          - not_null
+
+      - name: descricao_transacao
+        description: "Descrição detalhada da transação."
+
+      - name: data_carga
+        description: "ultima atualização da carga"

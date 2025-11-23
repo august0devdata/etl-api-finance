@@ -1,0 +1,23 @@
+{{ config(alias='accounts') }}
+
+with accounts_raw as (
+    select 
+      * 
+    from 
+      {{ source('public', 'raw_account') }} 
+), 
+accounts as (
+select
+    "ClientInd"::int as id_cliente, 
+    "Agencia"::float as agencia,
+    "NomeConta"::varchar as tipo_conta, 
+    {{ current_timestamp() }} as data_carga
+from accounts_raw 
+), 
+ distinct_accounts as (
+  select 
+    distinct *
+   from accounts
+ ) select * from distinct_accounts
+
+        
