@@ -1,5 +1,7 @@
-
-{{ config(alias='clients') }}
+{{ config(
+    alias='clients',
+    schema='finance_prod_stg'  
+) }}
 
 with clientes_raw as (
     select 

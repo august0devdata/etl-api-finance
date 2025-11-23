@@ -1,13 +1,17 @@
-{{ config(alias='transactions') }}
+{{ config(
+    alias='transactions',
+    schema='finance_prod_stg'  
+) }}
+
 
 with transactions as (
     select 
       * 
     from 
       {{ source('public', 'raw_account') }} 
-), 
+)
 select
-    "ClientInd"::int as id_cliente, 
+    "ClientId"::int as id_cliente, 
     "Valor"::float as valor, 
     "TipoTransacao"::varchar as tipo_transacao, 
     "DescricaoTransacao"::varchar as descricao_transacao, 

@@ -1,4 +1,7 @@
-{{ config(alias='accounts') }}
+{{ config(
+    alias='accounts',
+    schema='finance_prod_stg' 
+) }}
 
 with accounts_raw as (
     select 
@@ -8,7 +11,7 @@ with accounts_raw as (
 ), 
 accounts as (
 select
-    "ClientInd"::int as id_cliente, 
+    "ClientId"::int as id_cliente, 
     "Agencia"::float as agencia,
     "NomeConta"::varchar as tipo_conta, 
     {{ current_timestamp() }} as data_carga
