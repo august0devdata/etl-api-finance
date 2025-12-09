@@ -12,7 +12,7 @@ with transactions as (
 )
 select
     "ClientId"::int as id_cliente, 
-    "Agencia"::int as agencia, 
+    "Agencia"::float as agencia, 
     "Valor"::float as valor, 
     "TipoTransacao"::varchar as tipo_transacao, 
     "DescricaoTransacao"::varchar as descricao_transacao, 

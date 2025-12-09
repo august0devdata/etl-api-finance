@@ -12,7 +12,7 @@ with accounts_raw as (
 accounts as (
 select
     "ClientId"::int as id_cliente, 
-    "Agencia"::int as agencia,
+    "Agencia"::float as agencia,
     "NomeConta"::varchar as tipo_conta, 
     {{ current_timestamp() }} as data_carga
 from accounts_raw 
