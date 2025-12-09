@@ -1,18 +1,7 @@
-from dotenv import load_dotenv
-import os
-import requests as rq 
-import pandas as pd 
+from include.extract.extract_base import BaseExtract
 
-
-class ExtractAccount:
-    def __init__(self):
-         pass 
-    
-    def extract_account(self, ulr_endpoint):
-         self.request = rq.get(ulr_endpoint)
-         self.response = self.request.json() 
-         df_account_raw = pd.DataFrame(self.response)
-
-         return df_account_raw
-
-     
+class ExtractAccount(BaseExtract):
+    def extract(self, url):
+        data = self.get_json(url)
+        df = self.to_dataframe(data)
+        return df
